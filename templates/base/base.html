@@ -1,0 +1,47 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
+
+    <title>Dori-darmon sanoat</title>
+
+    <!-- css  -->
+    {% block css %}
+    {% include 'base/css.html' %}
+    {% endblock css %}
+    <!-- end css -->
+
+</head>
+
+<body id="top">
+    <!--  nav here -->
+    {% block nav %}
+    {% include 'base/nav.html' %}
+    {% endblock nav %}
+    <!-- end nav -->
+
+    <!-- Content Wrapper. Contains page content -->
+    {% block content %}
+
+    {% endblock content %}
+    <!-- /.content-wrapper -->
+
+    <!-- footer -->
+    {% block footer %}
+    {% include 'base/footer.html' %}
+    {% endblock footer %}
+    <!-- end footer -->
+
+    <!-- js -->
+    {% block js %}
+    {% include 'base/js.html' %}
+    {% endblock js %}
+    <!-- end js -->
+
+</body>
+
+</html>
