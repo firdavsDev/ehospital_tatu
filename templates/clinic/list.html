@@ -1,0 +1,106 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+
+
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block text-center">
+                    <h1 class="text-capitalize mb-5 text-lg">Ishlab chiqaruvchilar ro'yhati</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section service-2">
+    <div class="container">
+
+        <!-- search form here -->
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="{% url 'clinic-list' %}" method="GET">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-9 col-sm-9">
+                            <div class="form-group">
+                                <input type="text" name="search" class="form-control" placeholder="Search by name">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- search form end here -->
+
+        <div class="row">
+
+            {% for obj in page_obj %}
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="service-block mb-5">
+                    <div class="content">
+                        <h2 class="mt-4 mb-2 title-color">{{obj.name}}</h2>
+                        <p class="mb-4">
+                            Rasmiy nomi: {{obj.official_name}}<br>
+                            Brand nomi: {{obj.brand_name}}<br>
+                            Manzili: {{obj.address}}<br>
+                            Telefon raqami: {{obj.phone}}<br>
+                            Email: {{obj.email}}<br>
+                            Faks: {{obj.faks}}<br>
+                            Shahat kodi: {{obj.city_code}}<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            <!-- pagination here -->
+            <div class="col-lg-12">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page=1">Birinchi</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Oldingi</a>
+                        </li>
+                        {% endif %}
+
+                        <li class="page-item active">
+                            <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
+                        </li>
+
+                        {% if page_obj.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Keyingi</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">So'nggi</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+            <!-- pagination end here -->
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

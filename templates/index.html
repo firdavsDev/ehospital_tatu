@@ -198,88 +198,69 @@
 	</div>
 </section>
 
-<section class="section appoinment">
+
+<section class="contact-form-wrap section">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-6 ">
-				<div class="appoinment-content">
-					<img src="{% static 'images/about/img-3.jpg' %}" alt="" class="img-fluid">
-					<div class="emergency">
-						<h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>99 770 73 75</h2>
-					</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="section-title text-center">
+					<h2 class="text-md mb-2">Contact us</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p class="mb-5">Laboriosam exercitationem molestias beatae eos pariatur, similique, excepturi
+						mollitia sit perferendis maiores ratione aliquam?</p>
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-10 ">
-				<div class="appoinment-wrap mt-5 mt-lg-0">
-					<h2 class="mb-2 title-color">Book appoinment</h2>
-					<p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit
-						. Iste dolorum atque similique praesentium soluta.</p>
-					<form id="#" class="appoinment-form" method="post" action="#">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="form-group">
-									<select class="form-control" id="exampleFormControlSelect1">
-										<option>Choose Department</option>
-										<option>Software Design</option>
-										<option>Development cycle</option>
-										<option>Software Development</option>
-										<option>Maintenance</option>
-										<option>Process Query</option>
-										<option>Cost and Duration</option>
-										<option>Modal Delivery</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<select class="form-control" id="exampleFormControlSelect2">
-										<option>Select Doctors</option>
-										<option>Software Design</option>
-										<option>Development cycle</option>
-										<option>Software Development</option>
-										<option>Maintenance</option>
-										<option>Process Query</option>
-										<option>Cost and Duration</option>
-										<option>Modal Delivery</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="col-lg-6">
-								<div class="form-group">
-									<input name="date" id="date" type="text" class="form-control"
-										placeholder="dd/mm/yyyy">
-								</div>
-							</div>
-
-							<div class="col-lg-6">
-								<div class="form-group">
-									<input name="time" id="time" type="text" class="form-control" placeholder="Time">
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<input name="name" id="name" type="text" class="form-control"
-										placeholder="Full Name">
-								</div>
-							</div>
-
-							<div class="col-lg-6">
-								<div class="form-group">
-									<input name="phone" id="phone" type="Number" class="form-control"
-										placeholder="Phone Number">
-								</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<form id="contact-form" class="contact__form " method="post" action="mail.php">
+					<!-- form message -->
+					<div class="row">
+						<div class="col-12">
+							<div class="alert alert-success contact__msg" style="display: none" role="alert">
+								Your message was sent successfully.
 							</div>
 						</div>
-						<div class="form-group-2 mb-4">
-							<textarea name="message" id="message" class="form-control" rows="6"
-								placeholder="Your Message"></textarea>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<input name="name" id="name" type="text" class="form-control"
+									placeholder="Your Full Name">
+							</div>
 						</div>
 
-						<a class="btn btn-main btn-round-full" href="{% url 'contact' %}">Make Appoinment <i
-								class="icofont-simple-right ml-2  "></i></a>
-					</form>
-				</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<input name="email" id="email" type="email" class="form-control"
+									placeholder="Your Email Address">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<input name="subject" id="subject" type="text" class="form-control"
+									placeholder="Your Query Topic">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<input name="phone" id="phone" type="text" class="form-control"
+									placeholder="Your Phone Number">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group-2 mb-4">
+						<textarea name="message" id="message" class="form-control" rows="8"
+							placeholder="Your Message"></textarea>
+					</div>
+
+					<div class="text-center">
+						<input class="btn btn-main btn-round-full" name="submit" type="submit"
+							value="Send Messege"></input>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

@@ -14,6 +14,8 @@ urlpatterns = [
     path('', home, name='home'),
     # contact app
     path('contact/', include('contact.urls')),
+    # clinic app
+    path('clinic/', include('clinic.urls')),
 
 ]
 
