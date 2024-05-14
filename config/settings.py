@@ -10,6 +10,7 @@ SECRET_KEY = 'django-insecure-_7-vvr7vl0o2#e43r2ee!ygonq++^3=r%!ig*^dp#y-)#z$-1c
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://ruling-spider-usefully.ngrok-free.app']
 
 
 # Application definition

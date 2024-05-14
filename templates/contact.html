@@ -12,9 +12,22 @@
 				<div class="block text-center">
 					<span class="text-white">Contact Us</span>
 					<h1 class="text-capitalize mb-5 text-lg">Get in Touch</h1>
-
 				</div>
 			</div>
+
+			{% if messages %}
+			<div class="col-md-12">
+				{% for message in messages %}
+				<div class="alert alert-success contact__msg" role="alert">
+					{{ message }}
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				{% endfor %}
+			</div>
+			{% endif %}
+
 		</div>
 	</div>
 </section>
@@ -27,7 +40,7 @@
 				<div class="contact-block mb-4 mb-lg-0">
 					<i class="icofont-live-support"></i>
 					<h5>Call Us</h5>
-					+998 99 770 73 75
+					+998 99 549 31 31
 				</div>
 			</div>
 			<div class="col-lg-4 col-sm-6 col-md-6">
@@ -64,7 +77,6 @@
 			<div class="col-lg-12 col-md-12 col-sm-12">
 				<form id="contact-form" class="contact__form" method="POST" action="{% url 'contact' %}">
 					{% csrf_token %}
-
 
 					<!-- form message -->
 					<div class="row">

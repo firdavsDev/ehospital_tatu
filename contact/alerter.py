@@ -76,7 +76,7 @@ class Alerter:
         """
         return self.send_message(
             chat_id=self.chat_id,
-            text=f"🚫 <b>Error message text</b> ❌ \n\n <i>{
+            text=f"<i>{
                 text}</i> \n\n🐞<b>Please KILL this bug now</b> ‼️",
             parse_mode=parse_mode,
             disable_web_page_preview=disable_web_page_preview,

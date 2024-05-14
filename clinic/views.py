@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
-
+from django.contrib import messages
 
 # Create your views here.
 from .models import ClinicCompany
@@ -12,9 +12,10 @@ def clinic_company_list(request):
         search = request.GET.get('search')
         if search:
             clinic_companies = ClinicCompany.objects.filter(
-                name__icontains=search, is_checked=True)
+                name__icontains=search, is_checked=True).order_by('-created_at')
         else:
-            clinic_companies = ClinicCompany.objects.filter(is_checked=True)
+            clinic_companies = ClinicCompany.objects.filter(
+                is_checked=True).order_by('-created_at')
         # pagination
         paginator = Paginator(clinic_companies, 9)
         page_number = request.GET.get('page')
@@ -43,7 +44,9 @@ def create_clinic_company(request):
                 official_name=official_name, brand_name=brand_name,
                 sector_category=sector_category, faks=faks, city_code=city_code
             )
-            return render(request, 'clinic/create.html', {'message': 'Clinic company created successfully'})
+            messages.success(
+                request, 'Klinika adminga yuborildi, tasdiqlash kutilmoqda')
+            return redirect('clinic-list')
         return render(request, 'clinic/create.html')
     except Exception as e:
         print(e)

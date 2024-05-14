@@ -3,6 +3,14 @@
 {% load humanize %}
 
 {% block content %}
+
+<style>
+	.cusotom_clint_img {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
 <section class="banner">
 	<div class="container">
 		<div class="row">
@@ -32,23 +40,28 @@
 						<div class="feature-icon mb-4">
 							<i class="icofont-surgeon-alt"></i>
 						</div>
-						<span>24 Hours Service</span>
-						<h4 class="mb-3">Online Appoinment</h4>
-						<p class="mb-4">Get ALl time support for emergency.We have introduced the principle of family
-							medicine.</p>
-						<a href="{% url 'contact' %}" class="btn btn-main btn-round-full">Make a appoinment</a>
+						<span>24 soat online aloqa
+						</span>
+						<h4 class="mb-3">Online uchrashuv
+						</h4>
+						<p class="mb-4">Admin bilan istalgan vaqtda bog'lanish o'zinggizni qiziqtirgan savol va
+							takliflarni berishinggiz mumkin.
+						</p>
+						<a href="{% url 'contact' %}" class="btn btn-main btn-round-full">Bog'lanish</a>
 					</div>
 
 					<div class="feature-item mb-5 mb-lg-0">
 						<div class="feature-icon mb-4">
 							<i class="icofont-ui-clock"></i>
 						</div>
-						<span>Timing schedule</span>
-						<h4 class="mb-3">Working Hours</h4>
+						<h4 class="mb-3">Ish vaqti
+						</h4>
 						<ul class="w-hours list-unstyled">
-							<li class="d-flex justify-content-between">Sun - Wed : <span>8:00 - 17:00</span></li>
-							<li class="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
-							<li class="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
+							<li class="d-flex justify-content-between">Yakshanba - Chorshanba : <span>8:00 -
+									17:00</span></li>
+							<li class="d-flex justify-content-between">Seshanba - Juma : <span>9:00 - 17:00</span></li>
+							<li class="d-flex justify-content-between">Payshanba - Yakshanba : <span>10:00 -
+									17:00</span></li>
 						</ul>
 					</div>
 
@@ -56,10 +69,9 @@
 						<div class="feature-icon mb-4">
 							<i class="icofont-support"></i>
 						</div>
-						<span>Emegency Cases</span>
-						<h4 class="mb-3">+998 99 770 73 75</h4>
-						<p>Get ALl time support for emergency.We have introduced the principle of family medicine.Get
-							Conneted with us for any urgency .</p>
+						<span>Favqulotda Adminstrator bilan bog'lanish.</span>
+						<h4 class="mb-3">+998 99 549 31 31 </h4>
+						<p>Agar sizda favqulotda holatlar yuzaga kelsa admin bilan bog'laning</p>
 					</div>
 				</div>
 			</div>
@@ -75,15 +87,16 @@
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="counter-stat">
 						<i class="icofont-doctor"></i>
-						<span class="h3">58</span>k
-						<p>Happy People</p>
+						<span class="h3">50</span>k
+						<p>Kuzatuvchilar
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="counter-stat">
 						<i class="icofont-flag"></i>
 						<span class="h3">700</span>+
-						<p>Surgery Comepleted</p>
+						<p>Foydalanuvchilar</p>
 					</div>
 				</div>
 
@@ -91,14 +104,15 @@
 					<div class="counter-stat">
 						<i class="icofont-badge"></i>
 						<span class="h3">40</span>+
-						<p>Expert Doctors</p>
+						<p>Ishlab chiqaruvchilar</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="counter-stat">
 						<i class="icofont-globe"></i>
 						<span class="h3">20</span>
-						<p>Worldwide Branch</p>
+						<p>Biznes hamkorlar
+						</p>
 					</div>
 				</div>
 			</div>
@@ -111,10 +125,9 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-7 text-center">
 				<div class="section-title">
-					<h2>Award winning patient care</h2>
+					<h2>Bizda faqat Sog'liqni saqlash vazirligi tomonidan ro'yhatga olingan ishlab chiqaruvchilar
+					</h2>
 					<div class="divider mx-auto my-4"></div>
-					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt
-						molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
 				</div>
 			</div>
 		</div>
@@ -124,11 +137,13 @@
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
 						<i class="icofont-laboratory text-lg"></i>
-						<h4 class="mt-3 mb-3">Laboratory services</h4>
+						<h4 class="mt-3 mb-3">Ishonchli labaratoriyalar
+						</h4>
 					</div>
 
 					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+						<p class="mb-4">Davlat tashkilotlari tomonidan ro'yhatga
+							olingan labratoriyalar.</p>
 					</div>
 				</div>
 			</div>
@@ -137,10 +152,12 @@
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
 						<i class="icofont-heart-beat-alt text-lg"></i>
-						<h4 class="mt-3 mb-3">Heart Disease</h4>
+						<h4 class="mt-3 mb-3">Yurak qon-tomor kasalliklari.
+						</h4>
 					</div>
 					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+						<p class="mb-4">Yurak qon-tomir kasalliklari uchun
+							dori-darmon ishlab chiqaruvchilar..</p>
 					</div>
 				</div>
 			</div>
@@ -149,10 +166,12 @@
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
 						<i class="icofont-tooth text-lg"></i>
-						<h4 class="mt-3 mb-3">Dental Care</h4>
+						<h4 class="mt-3 mb-3">Tish kasalliklari
+						</h4>
 					</div>
 					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+						<p class="mb-4">Tish kasallillari uchun dori-darmon, xom-ashyo
+							ishlab chiqaruvchilari.</p>
 					</div>
 				</div>
 			</div>
@@ -162,11 +181,12 @@
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
 						<i class="icofont-crutch text-lg"></i>
-						<h4 class="mt-3 mb-3">Body Surgery</h4>
+						<h4 class="mt-3 mb-3">Nogironlik.</h4>
 					</div>
 
 					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+						<p class="mb-4">Nogironligi bo'lgan shahslar uchun tibbiy-ijtimoiy
+							yordam.</p>
 					</div>
 				</div>
 			</div>
@@ -175,10 +195,12 @@
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
 						<i class="icofont-brain-alt text-lg"></i>
-						<h4 class="mt-3 mb-3">Neurology Sargery</h4>
+						<h4 class="mt-3 mb-3">Nevrologik kasalliklar.
+						</h4>
 					</div>
 					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+						<p class="mb-4">Nervologik davolash uchun qo'llaniladigan
+							dori darmon ishlab chiqaruvchilar.</p>
 					</div>
 				</div>
 			</div>
@@ -187,10 +209,11 @@
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
 						<i class="icofont-dna-alt-1 text-lg"></i>
-						<h4 class="mt-3 mb-3">Gynecology</h4>
+						<h4 class="mt-3 mb-3">Gnekologiya.</h4>
 					</div>
 					<div class="content">
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+						<p class="mb-4"> Ayollarda uchraydiga gnekologik kasalliklarni davolashda
+							ishlatiladigan dori-darmon ishlab chiqaruvchilari.</p>
 					</div>
 				</div>
 			</div>
@@ -199,66 +222,57 @@
 </section>
 
 
-<section class="contact-form-wrap section">
+<section class="contact-form-wrap section" id="contact">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-6">
 				<div class="section-title text-center">
-					<h2 class="text-md mb-2">Contact us</h2>
+					<h2 class="text-md mb-2">Biz bilan bog'laning</h2>
 					<div class="divider mx-auto my-4"></div>
-					<p class="mb-5">Laboriosam exercitationem molestias beatae eos pariatur, similique, excepturi
-						mollitia sit perferendis maiores ratione aliquam?</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">
-				<form id="contact-form" class="contact__form " method="post" action="mail.php">
-					<!-- form message -->
-					<div class="row">
-						<div class="col-12">
-							<div class="alert alert-success contact__msg" style="display: none" role="alert">
-								Your message was sent successfully.
-							</div>
-						</div>
-					</div>
+				<form id="contact-form" class="contact__form" method="POST" action="{% url 'contact' %}">
+					{% csrf_token %}
 
+					<!-- form message -->
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
-								<input name="name" id="name" type="text" class="form-control"
-									placeholder="Your Full Name">
+								<input name="name" id="name" type="text" class="form-control" placeholder="Ismingiz"
+									required>
 							</div>
 						</div>
 
 						<div class="col-lg-6">
 							<div class="form-group">
 								<input name="email" id="email" type="email" class="form-control"
-									placeholder="Your Email Address">
+									placeholder="Email manzilingiz" required>
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<div class="form-group">
-								<input name="subject" id="subject" type="text" class="form-control"
-									placeholder="Your Query Topic">
+								<input name="subject" id="subject" type="text" class="form-control" placeholder="Mavzu"
+									required>
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<div class="form-group">
 								<input name="phone" id="phone" type="text" class="form-control"
-									placeholder="Your Phone Number">
+									placeholder="Telefon raqam" required>
 							</div>
 						</div>
 					</div>
 
 					<div class="form-group-2 mb-4">
-						<textarea name="message" id="message" class="form-control" rows="8"
-							placeholder="Your Message"></textarea>
+						<textarea name="message" id="message" class="form-control" rows="8" placeholder="Xabar"
+							required></textarea>
 					</div>
 
 					<div class="text-center">
-						<input class="btn btn-main btn-round-full" name="submit" type="submit"
-							value="Send Messege"></input>
+						<input class="btn btn-main btn-round-full" name="submit" type="submit" value="Yuborish"></input>
 					</div>
 				</form>
 			</div>
@@ -272,10 +286,9 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-7">
 				<div class="section-title text-center">
-					<h2>Partners who support us</h2>
+					<h2>HAMKORLARIMIZ</h2>
 					<div class="divider mx-auto my-4"></div>
-					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt
-						molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+					<p>O'zbekiston Respublikasi Sog'liqni saqlash vazirli, davlat idoralari</p>
 				</div>
 			</div>
 		</div>
@@ -283,56 +296,35 @@
 
 	<div class="container">
 		<div class="row clients-logo">
+
 			<div class="col-lg-2">
 				<div class="client-thumb">
-					<img src="{% static 'images/about/1.png' %}" alt="" class="img-fluid">
+					<img src="{% static 'images/about/IMAGE 2024-05-14 23:01:13.jpg' %}" alt="clints"
+						class="cusotom_clint_img">
 				</div>
 			</div>
+
 			<div class="col-lg-2">
 				<div class="client-thumb">
-					<img src="{% static 'images/about/2.png' %}" alt="" class="img-fluid">
+					<img src="{% static 'images/about/IMAGE 2024-05-14 23:01:18.jpg' %}" alt="clints"
+						class="cusotom_clint_img">
 				</div>
 			</div>
+
 			<div class="col-lg-2">
 				<div class="client-thumb">
-					<img src="{% static 'images/about/3.png' %}" alt="" class="img-fluid">
+					<img src="{% static 'images/about/IMAGE 2024-05-14 23:01:21.jpg' %}" alt="clints"
+						class="cusotom_clint_img">
 				</div>
 			</div>
+
 			<div class="col-lg-2">
 				<div class="client-thumb">
-					<img src="{% static 'images/about/4.png' %}" alt="" class="img-fluid">
+					<img src="{% static 'images/about/IMAGE 2024-05-14 23:01:23.jpg' %}" alt="clints"
+						class="cusotom_clint_img">
 				</div>
 			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/5.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/6.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/3.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/4.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/5.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="client-thumb">
-					<img src="{% static 'images/about/6.png' %}" alt="" class="img-fluid">
-				</div>
-			</div>
+
 		</div>
 	</div>
 </section>
