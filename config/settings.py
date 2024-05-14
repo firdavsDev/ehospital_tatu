@@ -10,7 +10,8 @@ SECRET_KEY = 'django-insecure-_7-vvr7vl0o2#e43r2ee!ygonq++^3=r%!ig*^dp#y-)#z$-1c
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://ruling-spider-usefully.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://ruling-spider-usefully.ngrok-free.app',
+                        "https://ehospitals-fcc19c1d14b5.herokuapp.com"]
 
 
 # Application definition
@@ -104,10 +105,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
-# STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static'
+# ]
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
